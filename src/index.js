@@ -47,6 +47,7 @@ function expressionCalculator(expr) {
             }
             leftExprPart = newExpr.slice(0, i);
 
+
             newExpr = leftExprPart + simpleExpressionResult(innerExpr) + rightExprPart;
             newExpr = newExpr.replace("--", "+");
             newExpr = newExpr.replace("+-", "-");
@@ -100,7 +101,7 @@ function simpleExpressionResult(newExpr) {
                     }
 
                     if (Number(right) === 0) {
-                        throw new Error("TypeError: Devision by zero.");
+                        throw new Error("TypeError: Division by zero.");
                     }
 
                     midNumber = (Number(left) / Number(right));
